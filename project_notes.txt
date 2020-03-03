@@ -1,0 +1,58 @@
+Use classes
+
+one class for game board (read in from file)
+need method to see if a space is occupied or not
+
+search strategy (successor function)
+
+Simulation class to run the whole thing
+
+The first line in the file creates a 2D array of that size
+
+Robot can't move diagonally, only up-down-left-right
+
+For ex:
+
+. empty space (traversable)
+i initial space (traversable, robot starts here)
+g goal space (traversable, robot’s goal here)
++ obstacle (not traversable)
+
+5
+...g.
+.++..
+.i+..
+..+..
++...+
+
+The maps that you will generate as output should be the same as the maps in the input files, except
+that each step in the path taken will be represented as an ‘o’ (the lower case letter o). The goal and
+initial spaces should remain ‘g’ and ‘i’ respectively. As an example, a solution map to the above
+input map might be:
+ooog.
+o++..
+oi+..
+..+..
++...+
+
+
+Class list:
+
+GameBoard Class - Generates the game board via reading a file
+Simulation Class - main class that connects everything and runs search
+Euclidean Class -  Euclidean distance from N to the goal
+Manhattan Class - Manhattan distance to the goal
+aStar Euclidean Class - Euclidean distance from N to the goal
+aStar Manhattan Class - Manhattan distance to the goal
+
+Strategy:
+1. The program will ask the user for the name of the file and will take in the file name as input
+2. When the user inputs the file, the board will be printed to the console to give the user a visual representation (look into graphics maybe?)
+3.
+
+
+with open("file.txt", "r") as f:
+  while True:
+      c = f.read(1)
+      if not c: break
+      print c
